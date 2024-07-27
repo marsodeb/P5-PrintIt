@@ -36,12 +36,12 @@ btnRight.addEventListener("click", rightClick);
 btnLeft.addEventListener("click", leftClick);
 
 // Fonction clique droit
-// A chaque clique j'incrémente mon index de 1 et je sauvegarde l'ancien index en calculant le nouveau index - 1;
+// A chaque clique je sauvegarde l'index dans lastIndex et j'incrémente mon index de 1 ;
 // Quand mon index arrive à la longueur de mon tableau donc (4) on revient à l'index 0.
 // J'execute ma fonction
 function rightClick() {
+  lastIndex = index;
   index++;
-  lastIndex = index - 1;
   if (index == slides.length) {
     index = 0;
   }
@@ -49,12 +49,12 @@ function rightClick() {
 }
 
 // Fonction clique gauche
-// A chaque clique je désincrémente mon index de 1 et je sauvegarde l'ancien index en calculant le nouveau index +1;
+// A chaque clique je sauvegarde l'index dans lastIndex et je désincrémente mon index de 1 ;
 // Quand mon index devient inférieur à 0 je reviens à longueur de mon tableau -1 pour obtenir l'index 3.
 // J'execute ma fonction
 function leftClick() {
-  index = index - 1;
-  lastIndex = index + 1;
+  lastIndex = index;
+  index--;
   if (index < 0) {
     index = slides.length - 1;
   }
