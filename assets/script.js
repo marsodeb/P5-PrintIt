@@ -42,7 +42,7 @@ btnLeft.addEventListener("click", leftClick);
 function rightClick() {
   lastIndex = index;
   index++;
-  if (index == slides.length) {
+  if (index === slides.length) {
     index = 0;
   }
   switchExec();
