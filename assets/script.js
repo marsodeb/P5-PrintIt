@@ -2,6 +2,7 @@ const dotsContainer = document.querySelector(".dots");
 const btnRight = document.querySelector(".arrow_right");
 const btnLeft = document.querySelector(".arrow_left");
 const imgSlide = document.querySelector(".banner-img");
+const tagSlide = document.querySelector("#banner p");
 
 let index = 0;
 let lastIndex = 0;
